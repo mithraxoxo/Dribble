@@ -1,5 +1,5 @@
-# Project Responsive Web Design using Bootstrap
-## Date:09.02.2025
+# Ex10 Project Responsive Web Design using Bootstrap
+## Date: 09.02.2025
 
 ## AIM:
 To create a simplified clone of Dribbble (https://dribbble.com/) landing page.
@@ -26,153 +26,322 @@ Create a HTML file and include the needed Bootstrap components.
 Publish the website in the LocalHost.
 
 ## PROGRAM :
+### Index.html
 ```
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dribble</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - TechMobile</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-danger" href="#">Dribbble</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Shots</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Designers</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Teams</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Community</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Jobs</a></li>
-                </ul>
-            </div>
-            <a class="btn btn-outline-light me-2" href="#">Sign in</a>
-            <a class="btn btn-outline-light me-2" href="#">Sign Up</a>
-            <input type="search" class="form-control w-auto" placeholder="Search" style="margin: 20px;">
-        </div>
-    </nav>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Tech Mobile</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <section id="home" class="bg-white py-5"  style="height: 45vh;" >
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-middle">
-                    <h1 class="display-4 fw-bold">What are you working on?</h1>
-                    <p class="my-3">Dribbble is a show-and-tell platform for designers.</p>
-                    <button class="btn btn-secondary me-2">Learn More</button>
-                    <button class="btn btn-primary">Sign up</button>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="home.png" class="img-fluid" alt="Design Work" style="height: 45vh;">
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Home Content -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Welcome to Tech Mobile</h1>
+      </div>
+    </div>
+  </div>
 
-    <section class="py-5">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-md-4">
-                    <h2 class="fw-bold">Popular</h2>
-                </div>
-                <div class="col-md-4 text-center">
-                    <button class="btn btn-light btn-secondary btn-outline-dark">Now</button>
-                    <button class="btn btn-light btn-secondary btn-outline-dark">Shots</button>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-3 col-sm-6">
-                    <div class="card shot-card">
-                        <img src="img4.jpeg" width="300" height="225">
-                      
-                        <div class="card-body text-center">
-                            <p class="card-text mb-0">🔗 Awe Design Studio</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="card shot-card">
-                        <img src="img7.jpg" width="300" height="225">
-                        
-                        <div class="card-body text-center">
-                            <p class="card-text mb-0">🔗 Russlan silz</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="card shot-card">
-                        <img src="img6.jpeg" width="300" height="225">
-                        <div class="card-body text-center">
-                            <p class="card-text mb-0">🔗 Alfrey Davilla</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="card shot-card">
-                        <img src="https://cdn.dribbble.com/users/1739084/screenshots/4448965/kyzzlj.jpg?resize=400x300&vertical=center" class="card-img-top" alt="Shot 2">
-                       
-                        <div class="card-body text-center">
-                            <p class="card-text mb-0">🔗 MakeReign</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="card shot-card">
-                        <img src="https://cdn.dribbble.com/users/140043/screenshots/9106916/dribbble_4_compressed.png?resize=400x300&vertical=center" class="card-img-top" alt="Shot 2">
-                        <div class="card-body text-center">
-                            <p class="card-text mb-0">🔗 Mattias Johannson</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="card shot-card">
-                        <img src="img2.jpg" width="300" height="225">
-                        
-                        <div class="card-body text-center">
-                            <p class="card-text mb-0">🔗 Jan Losert</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="card shot-card">
-                        <img src="img3.jpeg"width="300" height="225">
-                        <div class="card-body text-center">
-                            <p class="card-text mb-0">🔗 Wkio</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="card shot-card">
-                        <img src="https://cdn.dribbble.com/userupload/10964296/file/original-ffa83431e0b8639f6d1036a0f80c76ae.png?resize=400x300&vertical=center" class="card-img-top" alt="Shot 2">
-                        <div class="card-body text-center">
-                            <p class="card-text mb-0">🔗 Romain Tystramm</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
+  <!-- Image Carousel -->
+  <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="M1.jpg" alt="First slide">
+      </div>
+    
+      <div class="carousel-item">
+        <img class="d-block w-100" src="M2.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="M3.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p class="mb-0">Designed and developed by PREETHI D (24007817)</p>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-light text-center py-3 mt-5">
+    <p>[ROSELINE B]</p>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+```
+### About.html
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - MySite</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Tech Mobile</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Content -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>About Us</h2>
+        <p>Welcome to TechMobile, your one-stop destination for the latest and greatest in mobile technology. Our journey began with a simple yet powerful vision: to bring cutting-edge mobile devices and exceptional service to our customers, making technology accessible and enjoyable for everyone.</p>
+        <p>At TechMobile, we believe in the power of connectivity. Whether you're looking for a top-of-the-line smartphone, a reliable feature phone, or the perfect accessories to complement your device, we have it all. Our wide selection includes products from leading brands such as Apple, Samsung, Xiaomi, OnePlus, and many more.</p>
+        <p>What sets us apart is our commitment to quality and customer satisfaction. Our team of knowledgeable and friendly staff is always ready to assist you, offering expert advice and personalized recommendations to help you find the perfect mobile solution. We understand that every customer is unique, and we strive to meet your individual needs with a tailored shopping experience.</p>
+        <p>Our store isn't just about selling phones—it's about creating a community of tech enthusiasts. We regularly host events, workshops, and product launches to keep you updated with the latest trends and innovations in the mobile industry. Join us and be a part of a tech-savvy community where you can learn, share, and grow.</p>
+        <p>Thank you for choosing TechMobile. We look forward to serving you and helping you stay connected with the world.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-3 mt-5">
+    <p>[ROSELINE B]</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+```
+### Contact.html
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - MySite</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Tech Mobile</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Content -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Contact Us</h2>
+        <p>You can reach TechMobile through various convenient ways. Our store is located at 123 Tech Street, Mobile City, India 600001..</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-3 mt-5">
+    <p>[ROSELINE B]</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+```
+## services.html
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - MySite</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Tech Mobile</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Content -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Contact Us</h2>
+        <p>You can reach TechMobile through various convenient ways. Our store is located at 123 Tech Street, Mobile City, India 600001..</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-3 mt-5">
+    <p>[ROSELINE B]</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
 ```
+## Styles.css
+```
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #0056b3;
+  }
+  
+  .container {
+    margin-bottom: 60px; /* Ensure footer stays at the bottom */
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .carousel-inner img {
+    width: 100PX;
+    height: 300px; /* Adjust height as needed */
+  }
+  
+  footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    font-size: 1rem;
+    color: #666;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+```
+
+
 ## OUTPUT:
-
-   ![alt text](ex10-img1.png)
-   ![alt text](ex10-2.png)
-
+![Screenshot 2024-11-14 075311](https://github.com/user-attachments/assets/b4cbc325-c583-42c6-81fc-f9d624551533)
+![Screenshot 2024-11-14 075341](https://github.com/user-attachments/assets/bd13ae93-bf4d-484f-81d5-d46eb743ce56)
+![Screenshot 2024-11-14 075359](https://github.com/user-attachments/assets/b7b94783-cb18-48b2-ab77-4cd04ad0b657)
+![Screenshot 2024-11-14 075422](https://github.com/user-attachments/assets/93be95fe-df39-42b4-ad72-7a8c2284e2d4)
 
 ## RESULT:
 The Project for responsive web design using Bootstrap is completed successfully.
