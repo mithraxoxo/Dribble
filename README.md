@@ -1,5 +1,5 @@
 # Project Responsive Web Design using Bootstrap
-## Date:27.12.2024
+## Date: 25.12.2024
 
 ## AIM:
 To create a simplified clone of Dribbble (https://dribbble.com/) landing page.
@@ -27,87 +27,234 @@ Publish the website in the LocalHost.
 
 ## PROGRAM :
 ```
+HTML
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dribble</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container">
+        <a href="#Logo" class="navbar-brand mb-0 h1"><i>Dribble</i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link" aria-current="page">Shots</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Designers</a>
+            </li>
+            <li class="nav-item">
+              <a href="signup.html" class="nav-link">Sign up</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Login</a>
+            </li>
+          </ul>
+          <div class="ms-auto">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="What are you looking for?" aria-label="Search">
+              <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="text-center py-4 bg-dark text-white">
+      <div class="container">
+        <h1>What are you working on?</h2>
+            <br>
+            <p>"Bringing You the Best of Fashion, Tech, and More!"</p>
+        <div class="d-inline-flex gap-2">
+          <a href="#" class="btn btn-light">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container py-4">
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4">
+          <div class="card shadow rounded-3">
+            <img src="nature.png" class="card-img-top" alt="Joshua's design" height="250">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Joshua</h5>
+              <a href="#" class="btn btn-info btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow rounded-3">
+            <img src="eye.jpg" class="card-img-top" alt="Anderson's design" height="250">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Anderson</h5>
+              <a href="#" class="btn btn-info btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow rounded-3">
+            <img src="shot.jpg" class="card-img-top" alt="Style Designer's work" height="250">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Style Designer</h5>
+              <a href="#" class="btn btn-info btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow rounded-3">
+            <img src="shapes.webp" class="card-img-top" alt="Mathew's design" height="250">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Mathew</h5>
+              <a href="#" class="btn btn-info btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow rounded-3">
+            <img src="face.jpg" class="card-img-top" alt="Jslash's design" height="250">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Jslash</h5>
+              <a href="#" class="btn btn-info btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow rounded-3">
+            <img src="geometry.jpg" class="card-img-top" alt="Ulquira's design" height="250">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Ulquira</h5>
+              <a href="#" class="btn btn-info btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 | Designed and developed by Rhudhra phriyamvadha K S</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+```
+```
+SIGN UP
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dribbble Clone</title>
+    <title>Sign Up</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+        }
+        .card {
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: #fff;
+            color: #000;
+        }
+        .card-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+            background: #f8f9fa;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .card-header img {
+            width: 30px;
+            height: 30px;
+        }
+        .btn-primary {
+            background-color: #000;
+            border: none;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background-color: #333;
+        }
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #000;
+        }
+        .link:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+        .text-center a {
+            color: #000;
+        }
+        .text-center a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Dribbble Clone</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#jobs">Jobs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#communities">Communities</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-primary me-2" href="#signin">Sign In</a></li>
-                    <li class="nav-item"><a class="btn btn-primary" href="#signup">Sign Up</a></li>
-                </ul>
-            </div>
+    <div class="card p-4" style="width: 22rem;">
+        <div class="card-header">
+            Sign Up
         </div>
-    </nav>
-
-    <header class="bg-primary text-white text-center py-5">
-        <div class="container">
-            <img src="hero.jpg" alt="Hero Image" class="img-fluid mb-4" style="max-height: 300px;">
-            <h1>Unleash Your Creativity</h1>
-            <p class="lead">Join a vibrant community where ideas come to life and innovation thrives.</p>
-            <a href="#features" class="btn btn-light mt-3">Get Started</a>
-        </div>
-    </header>
-
-    <section id="features" class="bg-light py-5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <div class="mb-4">
-                        <img src="show case your work.jpg" alt="Showcase" class="img-fluid" style="max-height: 150px;">
-                    </div>
-                    <h4>Showcase Your Work</h4>
-                    <p>Upload and display your best designs to a global audience.</p>
+        <div class="card-body">
+            <form>
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
                 </div>
-                <div class="col-md-4">
-                    <div class="mb-4">
-                        <img src="collobrate.jpg" alt="Collaborate" class="img-fluid" style="max-height: 150px;">
-                    </div>
-                    <h4>Collaborate</h4>
-                    <p>Connect with like-minded creatives and start new projects together.</p>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
                 </div>
-                <div class="col-md-4">
-                    <div class="mb-4">
-                        <img src="insipierd.png" alt="Inspiration" class="img-fluid" style="max-height: 150px;">
-                    </div>
-                    <h4>Get Inspired</h4>
-                    <p>Find inspiration from thousands of designs shared by our community.</p>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3">Sign Up</button>
+            </form>
         </div>
-    </section>
-
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p class="mb-0">&copy; 2024 Dribbble Clone | Designed by [Ramya G]</p>
+        <div class="text-center mt-3">
+            <span>Already have an account? <a href="login.html" target="_blank" class="text-decoration-none link">Login</a></span>
         </div>
-    </footer>
-
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
 ```
-
 
 ## OUTPUT:
 
-![alt text](<Screenshot 2024-12-27 221457.png>)
-
+![alt text](project.png)
+![alt text](<sign up.png>)
 
 ## RESULT:
 The Project for responsive web design using Bootstrap is completed successfully.
